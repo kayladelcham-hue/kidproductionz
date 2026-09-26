@@ -28,7 +28,10 @@ jobs:
         with:
           enablement: true
       - name: Extract portfolio images
-        run: unzip -o assets/kidproductionz-webp-images.zip -d assets
+        run: |
+          unzip -o assets/kidproductionz-webp-images.zip -d assets
+          unzip -o assets/kidproductionz-new-work-images.zip -d assets
+          unzip -o assets/kidproductionz-work-images-batch-2.zip -d assets
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
