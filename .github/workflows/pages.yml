@@ -32,6 +32,8 @@ jobs:
           unzip -o assets/kidproductionz-webp-images.zip -d assets
           unzip -o assets/kidproductionz-new-work-images.zip -d assets
           unzip -o assets/kidproductionz-work-images-batch-2.zip -d assets
+          unzip -o assets/kidproductionz-work-images-batch-3.zip -d assets
+          unzip -o assets/kidproductionz-work-images-batch-4.zip -d assets
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
