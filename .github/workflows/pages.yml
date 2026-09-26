@@ -27,6 +27,8 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Extract portfolio images
+        run: unzip -o assets/kidproductionz-webp-images.zip -d assets
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
