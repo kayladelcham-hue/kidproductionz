@@ -1,0 +1,1 @@
+const button=document.querySelector('.menu-toggle');const nav=document.querySelector('.mobile-nav');if(button&&nav){button.addEventListener('click',()=>{const open=nav.hasAttribute('hidden');if(open){nav.removeAttribute('hidden');button.textContent='✕'}else{nav.setAttribute('hidden','');button.textContent='☰'}})}
