@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A curated collection of business, travel, and creator resources from KidProductionz." />
+  <title>Resources — KidProductionz</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .resources-hero{padding:118px 0 86px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+    .resources-hero:after{content:'';position:absolute;right:-9%;top:6%;width:42vw;height:42vw;max-width:620px;max-height:620px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.17),rgba(59,130,246,0) 68%);pointer-events:none}
+    .resources-hero h1{font-family:var(--display);font-size:clamp(86px,12vw,180px);font-weight:400;line-height:.82;margin:34px 0 28px;max-width:1100px;position:relative;z-index:1}
+    .resources-hero h1 em{font-style:normal;color:var(--blue)}
+    .resources-hero p{max-width:620px;color:var(--muted);font-size:15px;line-height:1.85;position:relative;z-index:1}
+    .resources-hero .disclosure-top{font-size:11px;line-height:1.7;margin-top:24px;max-width:720px;color:#718096}
+
+    .resources-section{padding:96px 0;border-bottom:1px solid var(--border)}
+    .resources-section.alt{background:var(--surface)}
+    .resources-head{display:grid;grid-template-columns:1.15fr .85fr;gap:8%;align-items:end;margin-bottom:40px}
+    .resources-head h2{font-family:var(--display);font-size:clamp(58px,7vw,104px);font-weight:400;line-height:.88;margin:28px 0 0}
+    .resources-head p{color:var(--muted);font-size:13px;line-height:1.8;margin:0;max-width:460px}
+
+    .resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .resource-card{border:1px solid var(--border);background:linear-gradient(145deg,rgba(23,32,51,.9),rgba(17,24,39,.92));padding:28px;min-height:315px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .2s ease,border-color .2s ease}
+    .resource-card:hover{transform:translateY(-4px);border-color:#3b82f6}
+    .resource-card.featured{grid-column:1/-1;min-height:360px;background:linear-gradient(120deg,#111827 0%,#15213b 58%,#122858 100%)}
+    .resource-card.featured:after{content:'TIKTOK';position:absolute;right:-10px;bottom:-28px;font-family:var(--display);font-size:170px;line-height:.8;color:rgba(255,255,255,.035);letter-spacing:.03em;pointer-events:none}
+    .resource-kicker{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:38px;text-transform:uppercase;font-size:9px;letter-spacing:.16em;color:var(--muted);font-weight:800}
+    .resource-kicker span:last-child{border:1px solid var(--border);border-radius:999px;padding:7px 10px;color:#cbd5e1}
+    .resource-card h3{font-family:var(--display);font-size:clamp(48px,5vw,78px);font-weight:400;line-height:.92;margin:0 0 16px;max-width:700px}
+    .resource-card p{color:var(--muted);font-size:13px;line-height:1.8;max-width:660px;margin:0 0 30px}
+    .resource-card .resource-benefit{color:#dbeafe;font-size:12px;font-weight:700;letter-spacing:.02em;margin-bottom:24px}
+    .resource-card .button{margin-top:auto;align-self:flex-start;position:relative;z-index:2}
+    .resource-card.featured .button{background:var(--blue);border-color:var(--blue);color:white}
+
+    .resources-note{padding:54px 0 80px}
+    .resources-note-inner{border-top:1px solid var(--border);padding-top:22px;display:flex;justify-content:space-between;gap:40px;align-items:flex-start}
+    .resources-note p{margin:0;color:var(--muted);font-size:11px;line-height:1.75;max-width:720px}
+    .resources-note a{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;border-bottom:1px solid currentColor;padding-bottom:6px}
+
+    @media(max-width:900px){
+      .resources-head{grid-template-columns:1fr;gap:24px}
+      .resource-grid{grid-template-columns:1fr}
+      .resource-card.featured{grid-column:auto}
+      .resources-note-inner{flex-direction:column}
+    }
+    @media(max-width:640px){
+      .resources-hero{padding:82px 0 64px}
+      .resources-hero h1{font-size:clamp(72px,21vw,112px)}
+      .resources-section{padding:72px 0}
+      .resources-head h2{font-size:62px}
+      .resource-card,.resource-card.featured{min-height:0;padding:23px}
+      .resource-kicker{margin-bottom:28px}
+      .resource-card h3{font-size:54px}
+      .resource-card .button{width:100%}
+      .resource-card.featured:after{font-size:100px;bottom:-15px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="../">KID<span>PRODUCTIONZ</span><i>.</i></a>
+    <nav class="desktop-nav">
+      <a href="../work/">Work</a><a href="../services/">Services</a><a href="../hospitality/">Hospitality</a><a href="../catch-flights-take-shots/">CFTS</a><a href="../sales-os/">Sales OS</a><a href="./">Resources</a><a href="../about/">About</a>
+    </nav>
+    <a class="header-cta" href="../start-project/">Start a Project →</a>
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+  </header>
+  <nav class="mobile-nav" hidden>
+    <a href="../work/">Work</a><a href="../services/">Services</a><a href="../hospitality/">Hospitality</a><a href="../catch-flights-take-shots/">Catch Flights, Take Shots</a><a href="../sales-os/">KP Sales OS</a><a href="./">Resources</a><a href="../about/">About</a><a href="../start-project/">Start a Project</a>
+  </nav>
+
+  <main>
+    <section class="resources-hero">
+      <div class="content-wrap">
+        <span class="eyebrow"><span class="blue-dot"></span>KidProductionz resources</span>
+        <h1>TOOLS. TRAVEL.<br><em>PERKS.</em></h1>
+        <p>A curated collection of business tools, travel platforms, and partner offers I actually think are worth knowing about. No giant link dump — just useful places to start.</p>
+        <p class="disclosure-top">Some links on this page are affiliate or partner links. KidProductionz may earn a commission from eligible purchases, bookings, sign-ups, or advertising activity at no additional cost to you. Offers and eligibility can change.</p>
+      </div>
+    </section>
+
+    <section class="resources-section">
+      <div class="content-wrap">
+        <div class="resources-head">
+          <div><span class="eyebrow"><span class="blue-dot"></span>Business + marketing</span><h2>GET SEEN.<br>GROW SMARTER.</h2></div>
+          <p>For businesses that want to put real distribution behind strong content — without wasting money guessing where to start.</p>
+        </div>
+        <div class="resource-grid">
+          <article class="resource-card featured">
+            <div class="resource-kicker"><span>Advertising partner</span><span>For businesses</span></div>
+            <h3>TIKTOK FOR BUSINESS</h3>
+            <p>Already thinking about testing TikTok Ads? Start through my TikTok for Business partner link so eligible new advertisers can access current promotional ad-credit offers.</p>
+            <div class="resource-benefit">Eligible new advertisers may qualify for matching promotional credits — up to $6,000 under current program terms.</div>
+            <a class="button primary" href="https://getstartedtiktok.partnerlinks.io/s5j2gsrjo0eg" target="_blank" rel="sponsored noopener">Explore TikTok Ads →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources-section alt">
+      <div class="content-wrap">
+        <div class="resources-head">
+          <div><span class="eyebrow"><span class="blue-dot"></span>Travel + experiences</span><h2>GO SOMEWHERE.<br>DO SOMETHING.</h2></div>
+          <p>Places to book the trip, find the stay, and actually give yourself something worth talking about when you get there.</p>
+        </div>
+        <div class="resource-grid">
+          <article class="resource-card">
+            <div class="resource-kicker"><span>Cruises</span><span>Travel partner</span></div>
+            <h3>VIRGIN VOYAGES</h3>
+            <p>Adults-only cruises with a different feel from the traditional cruise experience — built around food, entertainment, destinations, and a little less cruise-ship cheese.</p>
+            <a class="button primary" href="https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAUpY-1leHRuA2FlbQIxMQBwZG9mAmZkaWQWUPbNrKuVlU2L6jlI1_iAiNCf16uhL3NydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpydVQgsIlg3KwwzqmHxUEz9Js7dZAxjO8TX6J1goNnCF3pgAkAYmMgYdDW5c_aem_o4H9sgDZUuyqQ-p2BGxY9Q&im_ref=zJ0RBZTPVxyZWmd3ncVaDWTvUkrwWhRFy27ORE0&sharedid=&irpid=7857236&irgwc=1&afsrc=1&currencyCode=USD" target="_blank" rel="sponsored noopener">Explore Virgin Voyages →</a>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-kicker"><span>Travel booking</span><span>KidProductionz shop</span></div>
+            <h3>EXPEDIA</h3>
+            <p>Browse hotels, flights, vacation packages, and more through the KidProductionz Expedia Travel Shop when you're planning the next trip.</p>
+            <a class="button primary" href="https://expedia.com/shop/kid-productionz" target="_blank" rel="sponsored noopener">Shop Expedia →</a>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-kicker"><span>Tours + activities</span><span>Experience partner</span></div>
+            <h3>VIATOR</h3>
+            <p>Find tours, attractions, day trips, and local experiences around the world — especially useful when you know where you're going but have no clue what you're doing once you land.</p>
+            <a class="button primary" href="https://www.viator.com/?m=63915&nid=VR.416fec6c-4a9e-46ac-9b86-82ed75ac7a01.VT_EMAIL_UPA&pid=P00322567&mcid=42383&medium=link&medium_version=selector&campaign=Campaign" target="_blank" rel="sponsored noopener">Find Experiences →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources-note">
+      <div class="content-wrap resources-note-inner">
+        <p><strong style="color:var(--text)">A quick note:</strong> Partner offers, prices, promotional credits, and eligibility are controlled by the individual platform and may change. Always review the provider's current terms before purchasing, booking, or starting an ad campaign.</p>
+        <a href="mailto:kid.productionz1@gmail.com">Questions? Email KP →</a>
+      </div>
+    </section>
+
+    <section class="project-cta"><div class="content-wrap"><span class="eyebrow">Need the creative first?</span><h2>BUILD SOMETHING<br><em>WORTH SHARING.</em></h2><div class="cta-bottom"><p>Photography, content, and campaigns by KidProductionz.</p><a class="button dark" href="../start-project/">Start a Project →</a></div></div></section>
+  </main>
+
+  <footer class="site-footer content-wrap"><div><a class="footer-wordmark" href="../">KIDPRODUCTIONZ<span>.</span></a><p>Creative production for people,<br>brands & places.</p></div><div class="footer-links"><div><b>Explore</b><a href="../work/">Work</a><a href="../services/">Services</a><a href="../hospitality/">Hospitality</a><a href="../catch-flights-take-shots/">Catch Flights, Take Shots</a><a href="../sales-os/">KP Sales OS</a><a href="./">Resources</a><a href="../about/">About</a></div><div><b>Connect</b><a href="mailto:kid.productionz1@gmail.com">Email us</a><a href="https://instagram.com/kidproductionz_">Instagram / @kidproductionz_</a><a href="https://tiktok.com/@tretoofly">TikTok / @tretoofly</a><a href="https://tiktok.com/@kidproductionz1">TikTok / @kidproductionz1</a></div></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
