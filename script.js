@@ -1,5 +1,25 @@
 const button=document.querySelector('.menu-toggle');const nav=document.querySelector('.mobile-nav');if(button&&nav){button.addEventListener('click',()=>{const open=nav.hasAttribute('hidden');if(open){nav.removeAttribute('hidden');button.textContent='✕'}else{nav.setAttribute('hidden','');button.textContent='☰'}})}
 
+// Keep the curated Resources page discoverable across the site without having to
+// duplicate the link manually in every existing page template.
+(()=>{
+  const path=window.location.pathname;
+  const isRoot=/\/kidproductionz\/?$/.test(path)||path==='/'||/\/index\.html$/.test(path);
+  const resourcesHref=path.includes('/resources/')?'./':(isRoot?'resources/':'../resources/');
+  const addLink=(container,beforeSelector)=>{
+    if(!container||Array.from(container.querySelectorAll('a')).some(a=>a.textContent.trim().toLowerCase()==='resources'))return;
+    const link=document.createElement('a');link.href=resourcesHref;link.textContent='Resources';
+    const before=beforeSelector?container.querySelector(beforeSelector):null;
+    if(before)container.insertBefore(link,before);else container.appendChild(link);
+  };
+  addLink(document.querySelector('.desktop-nav'),'a[href*="about"]');
+  addLink(document.querySelector('.mobile-nav'),'a[href*="about"]');
+  document.querySelectorAll('.footer-links>div').forEach(group=>{
+    const heading=group.querySelector('b');
+    if(heading&&heading.textContent.trim().toLowerCase()==='explore')addLink(group,'a[href*="about"]');
+  });
+})();
+
 if(window.location.pathname.includes('/hospitality')){
   const projectCta=document.querySelector('.project-cta');
   if(projectCta){
